@@ -1,9 +1,13 @@
+// Utility functions for handling various operations within the Image Gallery component.
+
+// Function for deleting selected images from the gallery
 export const handleDeleteUtil = (images, setImages, setCheckedCount) => {
   const updatedImages = images.filter((image) => !image.checked);
   setImages(updatedImages);
   setCheckedCount(0);
 };
 
+// Function for handling changes in the checkbox state of individual images
 export const handleCheckboxChangeUtil = (
   id,
   images,
@@ -27,6 +31,7 @@ export const handleCheckboxChangeUtil = (
   setCheckedCount(newCheckedCount);
 };
 
+// Function for handling changes in the header checkbox state
 export const handleHeaderCheckboxChangeUtil = (
   checkedCount,
   images,
@@ -43,6 +48,7 @@ export const handleHeaderCheckboxChangeUtil = (
   setCheckedCount(newCheckedStatus ? images.length : 0);
 };
 
+// Function for adding new images to the gallery
 export const handleAddImageUtil = (e, images, setImages) => {
   const file = e.target.files[0];
   if (file) {

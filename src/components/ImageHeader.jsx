@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 
+// Header component responsible for rendering the header of the image gallery, including checkbox controls and delete functionality.
 import { handleHeaderCheckboxChangeUtil, handleDeleteUtil } from "../utils";
 
 export default function Header({
@@ -8,6 +9,7 @@ export default function Header({
   setCheckedCount,
   checkedCount,
 }) {
+  // Function for handling changes in the header checkbox
   const handleHeaderCheckboxChange = () => {
     handleHeaderCheckboxChangeUtil(
       checkedCount,
@@ -17,10 +19,12 @@ export default function Header({
     );
   };
 
+  // Function for handling deletion of selected images
   const handleDelete = () => {
     handleDeleteUtil(images, setImages, setCheckedCount);
   };
 
+  // Function for rendering the delete button based on the checked count
   const renderDeleteButton = () => {
     if (checkedCount === 0) {
       return null;
@@ -36,12 +40,14 @@ export default function Header({
     }
   };
 
+  // Conditional rendering based on the checked count
   if (checkedCount === 0) {
     return <h2 className="text-2xl font-bold text-black mb-3">Gallery</h2>;
   } else {
     return (
       <div className="flex flex-wrap justify-between items-center">
         <div className="text-2xl font-bold text-black mb-3">
+          {/* Checkbox input for header checkbox */}
           <input
             className="lg:scale-150"
             type="checkbox"
@@ -50,6 +56,7 @@ export default function Header({
           />{" "}
           {checkedCount} {checkedCount === 1 ? "File" : "Files"} Selected
         </div>
+        {/* Rendering the delete button */}
         <div onClick={handleDelete} className="text-2xl font-bold text-black">
           {renderDeleteButton()}
         </div>

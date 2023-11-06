@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { SortableItem } from "react-easy-sort";
 
+// ImageItem component responsible for rendering each individual image in the gallery.
 const ImageItem = ({
   image,
   isImageFirst,
@@ -11,6 +12,7 @@ const ImageItem = ({
   showCheckedOverlay,
   showCheckbox,
 }) => {
+  // Rendering the ImageItem component for each image
   return (
     <SortableItem key={image.id}>
       <div
@@ -22,18 +24,21 @@ const ImageItem = ({
             : "border-[3px] border-neutral-200 shadow-sm rounded-lg relative"
         } hover:cursor-pointer`}
       >
+        {/* Conditional rendering of hover and checked overlays */}
         {showHoverOverlay && (
           <div className="bg-black absolute w-full h-full rounded-lg opacity-30"></div>
         )}
         {showCheckedOverlay && (
           <div className="bg-neutral-300 absolute w-full h-full rounded-lg opacity-30"></div>
         )}
+        {/* Rendering the image */}
         <img
           src={image.imageUrl}
           className="rounded-lg w-full h-full"
           alt="gallery"
         />
         <div>
+          {/* Rendering the checkbox if needed */}
           {showCheckbox && (
             <input
               className="absolute top-5 left-5 lg:scale-150"
