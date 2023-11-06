@@ -67,8 +67,7 @@ const imageData = [
   },
 ];
 const addImagePlaceholder = {
-  imageUrl:
-    "https://static.vecteezy.com/system/resources/previews/004/968/473/original/upload-or-add-a-picture-jpg-file-concept-illustration-flat-design-eps10-modern-graphic-element-for-landing-page-empty-state-ui-infographic-icon-etc-vector.jpg",
+  imageUrl: "./assets/Image/add-Image-Placeholder.jpg",
 };
 
 export { imageData, addImagePlaceholder };
