@@ -2,6 +2,7 @@
 
 
 This is a React-based Image Gallery application that allows users to manage and organize a collection of images. Users can sort images, select multiple images for deletion, and add new images to the gallery.
+
 ## Live Demo
 
 Check out the live demo of the project [here](https://react-sorted-dnd-gallery.vercel.app/).
@@ -47,6 +48,5 @@ The codebase for the Image Gallery application is structured as follows:
 - `ImageItem.jsx`: Component for rendering individual images in the gallery.
 - `ImageHeader.jsx`: Component for rendering the header of the image gallery with checkbox controls and delete functionality.
 - `utils.js`: Contains utility functions for handling various operations within the Image Gallery component.
-- Other utility libraries and dependencies for sorting and managing image data.
 
 
