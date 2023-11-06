@@ -1,1 +1,1 @@
-# react-dnd-gallery
+# React Sortable Drag & Drop Image Gallery
